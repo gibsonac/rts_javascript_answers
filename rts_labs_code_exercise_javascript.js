@@ -1,3 +1,5 @@
+// #1  Print the number of integers in an array that are above the given input and the number that are below, e.g. for the array [1, 5, 2, 1, 10] with input 6, print “above: 1, below: 4”.
+
 function Above_and_Below(givenArray, num) {
     var above = 0;
     var below = 0;
@@ -15,6 +17,9 @@ function Above_and_Below(givenArray, num) {
     return ('above: ' + above + ', below: ' + below);
 };
 console.log(Above_and_Below([1, 5, 2, 1, 10], 6));
+
+// #2  Rotate the characters in a string by a given input and have the overflow appear at the beginning, e.g. “MyString” rotated by 2 is “ngMyStri”.
+
 
 function questionTwo(givenString, num) {
     if (num < 0) {
@@ -49,8 +54,8 @@ function questionTwoSplit(givenString, num) {
     };
     num = num % givenString.length;
     var splitLocation = givenString.length - num;
-    var answer="";
-    var stringArray = [givenString.slice(0,splitLocation),givenString.slice(splitLocation, givenString.length)];
+    var answer = "";
+    var stringArray = [givenString.slice(0, splitLocation), givenString.slice(splitLocation, givenString.length)];
     for (var x = stringArray.length - 1; x >= 0; x--) {
         answer = answer + stringArray[x];
     };
