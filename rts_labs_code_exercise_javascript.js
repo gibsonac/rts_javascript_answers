@@ -29,6 +29,9 @@ function questionTwo(givenString, num) {
         return "you need to provide a string!";
     };
     num = num % givenString.length;
+    if (num == 0) {
+        return givenString;
+    };
     var tempString = "";
     var untouchedString = givenString.length - num;
     var x = givenString.length - 1;
@@ -53,6 +56,9 @@ function questionTwoSplit(givenString, num) {
         return "you need to provide a string!";
     };
     num = num % givenString.length;
+    if (num == 0) {
+        return givenString;
+    };
     var splitLocation = givenString.length - num;
     var answer = "";
     var stringArray = [givenString.slice(0, splitLocation), givenString.slice(splitLocation, givenString.length)];
